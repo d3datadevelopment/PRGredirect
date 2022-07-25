@@ -18,5 +18,7 @@ $aLang = [
     'SHOP_MODULE_GROUP_d3PRGredirect_general'           => 'anwenden auf',
     'SHOP_MODULE_d3PRGredirect_search'                  => 'Such-Controller',
     'SHOP_MODULE_d3PRGredirect_alist'                   => 'Artikellisten-Controller (Kategorien)',
+    'SHOP_MODULE_d3PRGredirect_manufacturerlist'        => 'Artikellisten-Controller (Hersteller)',
+    'SHOP_MODULE_d3PRGredirect_vendorlist'              => 'Artikellisten-Controller (Lieferanten)',
     'SHOP_MODULE_d3PRGredirect_contact'                 => 'Kontaktanfragen-Controller',
 ];

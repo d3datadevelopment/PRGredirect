@@ -15,11 +15,15 @@ declare(strict_types=1);
 
 use D3\PRGredirects\Modules\Application\Controllers\ArticleListController_PRGredirect;
 use D3\PRGredirects\Modules\Application\Controllers\ContactController_PRGredirect;
+use D3\PRGredirects\Modules\Application\Controllers\ManufacturerListController_PRGredirect;
 use D3\PRGredirects\Modules\Application\Controllers\SearchController_PRGredirect;
+use D3\PRGredirects\Modules\Application\Controllers\VendorListController_PRGredirect;
 use D3\PRGredirects\Modules\Core\Utils_PRGredirect;
 use OxidEsales\Eshop\Application\Controller\ArticleListController;
 use OxidEsales\Eshop\Application\Controller\ContactController;
+use OxidEsales\Eshop\Application\Controller\ManufacturerListController;
 use OxidEsales\Eshop\Application\Controller\SearchController;
+use OxidEsales\Eshop\Application\Controller\VendorListController;
 use OxidEsales\Eshop\Core\Utils;
 
 $sMetadataVersion = '2.1';
@@ -45,7 +49,9 @@ $aModule = [
         Utils::class => Utils_PRGredirect::class,
         ArticleListController::class => ArticleListController_PRGredirect::class,
         ContactController::class   => ContactController_PRGredirect::class,
+        ManufacturerListController::class  => ManufacturerListController_PRGredirect::class,
         SearchController::class    => SearchController_PRGredirect::class,
+        VendorListController::class    => VendorListController_PRGredirect::class
     ],
     'settings'    => [
         [
@@ -57,6 +63,18 @@ $aModule = [
         [
             'group'     => $sModuleId.'_general',
             'name'      => $sModuleId.'_alist',
+            'type'      => 'bool',
+            'value'     => false,
+        ],
+        [
+            'group'     => $sModuleId.'_general',
+            'name'      => $sModuleId.'_manufacturerlist',
+            'type'      => 'bool',
+            'value'     => false,
+        ],
+        [
+            'group'     => $sModuleId.'_general',
+            'name'      => $sModuleId.'_vendorlist',
             'type'      => 'bool',
             'value'     => false,
         ],
