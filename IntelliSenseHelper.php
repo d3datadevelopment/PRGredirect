@@ -21,16 +21,28 @@ namespace D3\PRGredirects\Modules\Application\Controllers {
     use OxidEsales\Eshop\Application\Controller\SearchController;
     use OxidEsales\Eshop\Application\Controller\VendorListController;
 
-    class ArticleListController_PRGredirect_parent extends ArticleListController {}
-    class ContactController_PRGredirect_parent extends ContactController {}
-    class ManufacturerListController_PRGredirect_parent extends ManufacturerListController {}
-    class SearchController_PRGredirect_parent extends SearchController {}
-    class VendorListController_PRGredirect_parent extends VendorListController {}
+    class ArticleListController_PRGredirect_parent extends ArticleListController
+    {
+    }
+    class ContactController_PRGredirect_parent extends ContactController
+    {
+    }
+    class ManufacturerListController_PRGredirect_parent extends ManufacturerListController
+    {
+    }
+    class SearchController_PRGredirect_parent extends SearchController
+    {
+    }
+    class VendorListController_PRGredirect_parent extends VendorListController
+    {
+    }
 }
 
 namespace D3\PRGredirects\Modules\Core {
 
     use OxidEsales\Eshop\Core\Utils;
 
-    class Utils_PRGredirect_parent extends Utils {}
+    class Utils_PRGredirect_parent extends Utils
+    {
+    }
 }

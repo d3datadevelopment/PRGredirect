@@ -22,14 +22,14 @@ class Utils_PRGredirect extends Utils_PRGredirect_parent
 {
     public function d3PrgRedirect($url)
     {
-        $url         = str_ireplace( "&amp;", "&", $url );
+        $url         = str_ireplace("&amp;", "&", $url);
         $headerCode = "HTTP/1.1 303 See Other";
 
         try {
             $this->_simpleRedirect($url, $headerCode);
 
             Registry::getSession()->freeze();
-        } catch ( Exception $e ) {
+        } catch (Exception $e) {
             $e->debugOut();
         }
 

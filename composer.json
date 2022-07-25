@@ -25,14 +25,18 @@
     "GPL-3.0-or-later"
   ],
   "require": {
-    "php": ">=7.0",
     "oxid-esales/oxideshop-ce": "6.3 - 6.10"
+  },
+  "require-dev": {
+    "oxid-esales/oxideshop-ce": "~6.10.0",
+    "friendsofphp/php-cs-fixer": "^2.19"
   },
   "extra": {
     "oxideshop": {
       "blacklist-filter": [
         "*.md",
-        "composer.json"
+        "composer.json",
+        ".php-cs-fixer.php"
       ],
       "target-directory": "d3/prg-redirects"
     }

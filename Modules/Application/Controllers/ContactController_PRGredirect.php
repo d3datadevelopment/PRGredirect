@@ -19,10 +19,9 @@ use D3\PRGredirects\Application\Core\redirectControllerTrait;
 
 class ContactController_PRGredirect extends ContactController_PRGredirect_parent
 {
+    use redirectControllerTrait;
     /** @var bool */
     private $success = true;
-
-    use redirectControllerTrait;
 
     /**
      * @return bool

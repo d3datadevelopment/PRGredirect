@@ -27,7 +27,7 @@ trait redirectControllerTrait
             $utils = Registry::getUtils();
 
             $this->setFncName(null);
-            $utils->d3PrgRedirect( $this->generatePageNavigationUrl() );
+            $utils->d3PrgRedirect($this->generatePageNavigationUrl());
         }
     }
 
