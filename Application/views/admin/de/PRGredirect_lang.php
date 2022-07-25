@@ -17,6 +17,6 @@ $aLang = [
     'charset'                                         => 'UTF-8',
     'SHOP_MODULE_GROUP_d3PRGredirect_general'           => 'anwenden auf',
     'SHOP_MODULE_d3PRGredirect_search'                  => 'Such-Controller',
-    'SHOP_MODULE_d3PRGredirect_articlelists'            => 'Artikellisten-Controller (Kategorien)',
+    'SHOP_MODULE_d3PRGredirect_alist'                   => 'Artikellisten-Controller (Kategorien)',
     'SHOP_MODULE_d3PRGredirect_contact'                 => 'Kontaktanfragen-Controller',
 ];

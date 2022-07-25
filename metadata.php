@@ -13,8 +13,12 @@
 
 declare(strict_types=1);
 
+use D3\PRGredirects\Modules\Application\Controllers\ArticleListController_PRGredirect;
+use D3\PRGredirects\Modules\Application\Controllers\ContactController_PRGredirect;
 use D3\PRGredirects\Modules\Application\Controllers\SearchController_PRGredirect;
 use D3\PRGredirects\Modules\Core\Utils_PRGredirect;
+use OxidEsales\Eshop\Application\Controller\ArticleListController;
+use OxidEsales\Eshop\Application\Controller\ContactController;
 use OxidEsales\Eshop\Application\Controller\SearchController;
 use OxidEsales\Eshop\Core\Utils;
 
@@ -39,7 +43,9 @@ $aModule = [
     'url'         => 'https://www.oxidmodule.com/',
     'extend'      => [
         Utils::class => Utils_PRGredirect::class,
-        SearchController::class    => SearchController_PRGredirect::class
+        ArticleListController::class => ArticleListController_PRGredirect::class,
+        ContactController::class   => ContactController_PRGredirect::class,
+        SearchController::class    => SearchController_PRGredirect::class,
     ],
     'settings'    => [
         [
@@ -50,7 +56,7 @@ $aModule = [
         ],
         [
             'group'     => $sModuleId.'_general',
-            'name'      => $sModuleId.'_articlelists',
+            'name'      => $sModuleId.'_alist',
             'type'      => 'bool',
             'value'     => false,
         ],

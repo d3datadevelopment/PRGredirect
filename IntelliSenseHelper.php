@@ -15,8 +15,12 @@ declare(strict_types=1);
 
 namespace D3\PRGredirects\Modules\Application\Controllers {
 
+    use OxidEsales\Eshop\Application\Controller\ArticleListController;
+    use OxidEsales\Eshop\Application\Controller\ContactController;
     use OxidEsales\Eshop\Application\Controller\SearchController;
 
+    class ArticleListController_PRGredirect_parent extends ArticleListController {}
+    class ContactController_PRGredirect_parent extends ContactController {}
     class SearchController_PRGredirect_parent extends SearchController {}
 }
 
