@@ -29,7 +29,8 @@
   },
   "require-dev": {
     "oxid-esales/oxideshop-ce": "~6.10.0",
-    "friendsofphp/php-cs-fixer": "^2.19"
+    "friendsofphp/php-cs-fixer": "^2.19",
+    "phpstan/phpstan": "^1.8"
   },
   "extra": {
     "oxideshop": {

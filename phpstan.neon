@@ -1,0 +1,8 @@
+parameters:
+    scanFiles:
+      - IntelliSenseHelper.php
+    paths:
+        - Application
+        - Modules
+    level: 0
+    phpVersion: 80000
