@@ -38,7 +38,8 @@
       "blacklist-filter": [
         "*.md",
         "composer.json",
-        ".php-cs-fixer.php"
+        ".php-cs-fixer.php",
+        "*.neon"
       ],
       "target-directory": "d3/prg-redirects"
     }
