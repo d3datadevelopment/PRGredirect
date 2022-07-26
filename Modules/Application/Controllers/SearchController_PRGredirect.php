@@ -28,7 +28,7 @@ class SearchController_PRGredirect extends SearchController_PRGredirect_parent
     {
         $template = parent::render();
 
-        $this->d3DoPRGRedirect();
+        $this->d3DoPRGSelfRedirect();
 
         return $template;
     }

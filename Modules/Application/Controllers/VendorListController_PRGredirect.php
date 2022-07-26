@@ -28,7 +28,7 @@ class VendorListController_PRGredirect extends VendorListController_PRGredirect_
     {
         $template = parent::render();
 
-        $this->d3DoPRGRedirect();
+        $this->d3DoPRGSelfRedirect();
 
         return $template;
     }

@@ -41,7 +41,7 @@ class ContactController_PRGredirect extends ContactController_PRGredirect_parent
         $template = parent::render();
 
         if ($this->success !== false) {
-            $this->d3DoPRGRedirect();
+            $this->d3DoPRGSelfRedirect();
         }
 
         return $template;

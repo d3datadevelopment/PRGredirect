@@ -23,23 +23,41 @@ trait redirectControllerTrait
     /**
      * @return void
      */
-    protected function d3DoPRGRedirect(): void
+    protected function d3DoPRGSelfRedirect(): void
     {
-        if ($this->d3ShouldDoPRGredirect()) {
+        if ($this->d3SelfRedirectIsConfigured()) {
+            $this->d3DoPRGCustomRedirect($this->generatePageNavigationUrl());
+        }
+    }
+
+    /**
+     * @param string $url
+     * @return void
+     */
+    protected function d3DoPRGCustomRedirect(string $url): void
+    {
+        if ($this->d3IsPostRequest()) {
             /** @var Utils_PRGredirect $utils */
             $utils = Registry::getUtils();
 
             $this->setFncName('');
-            $utils->d3PrgRedirect($this->generatePageNavigationUrl());
+            $utils->d3PrgRedirect($url);
         }
     }
 
     /**
      * @return bool
      */
-    protected function d3ShouldDoPRGredirect(): bool
+    protected function d3IsPostRequest(): bool
     {
-        return strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' &&
-            Registry::getConfig()->getConfigParam('d3PRGredirect_'.$this->getClassKey()) === true;
+        return strtoupper($_SERVER['REQUEST_METHOD']) === 'POST';
+    }
+
+    /**
+     * @return bool
+     */
+    protected function d3SelfRedirectIsConfigured(): bool
+    {
+        return Registry::getConfig()->getConfigParam('d3PRGredirect_'.$this->getClassKey()) === true;
     }
 }

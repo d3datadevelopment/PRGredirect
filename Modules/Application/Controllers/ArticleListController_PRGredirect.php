@@ -28,7 +28,7 @@ class ArticleListController_PRGredirect extends ArticleListController_PRGredirec
     {
         $template = parent::render();
 
-        $this->d3DoPRGRedirect();
+        $this->d3DoPRGSelfRedirect();
 
         return $template;
     }

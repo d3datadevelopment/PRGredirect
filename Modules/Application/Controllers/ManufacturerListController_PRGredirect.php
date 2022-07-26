@@ -28,7 +28,7 @@ class ManufacturerListController_PRGredirect extends ManufacturerListController_
     {
         $template = parent::render();
 
-        $this->d3DoPRGRedirect();
+        $this->d3DoPRGSelfRedirect();
 
         return $template;
     }
