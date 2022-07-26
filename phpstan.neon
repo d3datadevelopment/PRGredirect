@@ -4,5 +4,5 @@ parameters:
     paths:
         - Application
         - Modules
-    level: 0
-    phpVersion: 80000
+    level: 9
+    phpVersion: 70100

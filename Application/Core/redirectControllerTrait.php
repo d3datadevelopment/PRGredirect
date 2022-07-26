@@ -20,13 +20,16 @@ use OxidEsales\Eshop\Core\Registry;
 
 trait redirectControllerTrait
 {
-    protected function d3DoPRGRedirect()
+    /**
+     * @return void
+     */
+    protected function d3DoPRGRedirect(): void
     {
         if ($this->d3ShouldDoPRGredirect()) {
             /** @var Utils_PRGredirect $utils */
             $utils = Registry::getUtils();
 
-            $this->setFncName(null);
+            $this->setFncName('');
             $utils->d3PrgRedirect($this->generatePageNavigationUrl());
         }
     }

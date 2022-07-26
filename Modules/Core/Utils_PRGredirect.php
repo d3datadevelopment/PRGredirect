@@ -15,12 +15,16 @@ declare(strict_types=1);
 
 namespace D3\PRGredirects\Modules\Core;
 
-use Exception;
+use OxidEsales\Eshop\Core\Exception\StandardException;
 use OxidEsales\Eshop\Core\Registry;
 
 class Utils_PRGredirect extends Utils_PRGredirect_parent
 {
-    public function d3PrgRedirect($url)
+    /**
+     * @param string $url
+     * @return void
+     */
+    public function d3PrgRedirect(string $url): void
     {
         $url         = str_ireplace("&amp;", "&", $url);
         $headerCode = "HTTP/1.1 303 See Other";
@@ -29,7 +33,7 @@ class Utils_PRGredirect extends Utils_PRGredirect_parent
             $this->_simpleRedirect($url, $headerCode);
 
             Registry::getSession()->freeze();
-        } catch (Exception $e) {
+        } catch (StandardException $e) {
             $e->debugOut();
         }
 
