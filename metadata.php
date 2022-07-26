@@ -41,7 +41,7 @@ $aModule = [
         'de' => 'siehe https://de.wikipedia.org/wiki/Post/Redirect/Get',
         'en' => 'see https://en.wikipedia.org/wiki/Post/Redirect/Get',
     ],
-    'version'     => '1.0.0.0',
+    'version'     => '1.1.0.0',
     'author'      => 'D&sup3; Data Development (Inh.: Thomas Dartsch)',
     'email'       => 'support@shopmodule.com',
     'url'         => 'https://www.oxidmodule.com/',
