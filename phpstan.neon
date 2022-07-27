@@ -1,6 +1,7 @@
 parameters:
     scanFiles:
       - IntelliSenseHelper.php
+      - ../../oxid-esales/oxideshop-ce/source/oxfunctions.php
     paths:
         - Application
         - Modules
