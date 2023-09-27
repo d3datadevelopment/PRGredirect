@@ -6,9 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://git.d3data.de/D3Public/PRGredirect/compare/1.1.1.0...rel_1.x)
 
-## [1.1.1.0](https://git.d3data.de/D3Public/PRGredirect/compare/1.1.0.0...1.1.1.0) - 2023-01-03
+## [1.1.1.0](https://git.d3data.de/D3Public/PRGredirect/compare/1.1.0.0...1.1.1.0) - 2023-09-27
 ### Added
-- make installable in OXID 6.5 (CE 6.12 + 6.13)
+- make installable in OXID 6.5 (CE 6.12 + 6.14)
 
 ## [1.1.0.0](https://git.d3data.de/D3Public/PRGredirect/compare/1.0.0.0...1.1.0.0) - 2022-07-26
 ### Added
