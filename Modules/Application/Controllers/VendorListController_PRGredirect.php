@@ -24,7 +24,7 @@ class VendorListController_PRGredirect extends VendorListController_PRGredirect_
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
         $template = parent::render();
 

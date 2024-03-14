@@ -24,7 +24,7 @@ class ManufacturerListController_PRGredirect extends ManufacturerListController_
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
         $template = parent::render();
 

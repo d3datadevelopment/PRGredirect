@@ -24,7 +24,7 @@ class SearchController_PRGredirect extends SearchController_PRGredirect_parent
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
         $template = parent::render();
 

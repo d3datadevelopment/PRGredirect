@@ -36,7 +36,7 @@ class ContactController_PRGredirect extends ContactController_PRGredirect_parent
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
         $template = parent::render();
 

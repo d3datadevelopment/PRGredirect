@@ -24,7 +24,7 @@ class ArticleListController_PRGredirect extends ArticleListController_PRGredirec
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
         $template = parent::render();
 
