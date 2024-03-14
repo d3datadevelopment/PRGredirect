@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://git.d3data.de/D3Public/PRGredirect/compare/1.1.1.0...rel_1.x)
 
+## [1.1.2.0](https://git.d3data.de/D3Public/PRGredirect/compare/1.1.0.0...1.1.1.0) - 2023-09-27
+### Fixed 
+- incompatible type declarations on oxid-native-methods
+
 ## [1.1.1.0](https://git.d3data.de/D3Public/PRGredirect/compare/1.1.0.0...1.1.1.0) - 2023-09-27
 ### Added
 - make installable in OXID 6.5 (CE 6.12 + 6.14)
