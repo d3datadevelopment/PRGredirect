@@ -14,7 +14,7 @@ This package requires an Composer installed OXID eShop as defined in [composer.j
 Open a command line interface and navigate to the shop root directory (parent of source and vendor). Execute the following command. Adapt the paths to your environment.
 
 ```bash
-php composer require d3/prg-redirects:^1.0
+php composer require d3/prg-redirects:^2.0
 ``` 
 
 Activate the module in the admin area of the shop in "Extensions -> Modules".

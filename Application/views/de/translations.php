@@ -13,7 +13,8 @@
 
 declare(strict_types=1);
 
-$aLang = [
+// @codeCoverageIgnoreStart
+return [
     'charset'                                         => 'UTF-8',
     'SHOP_MODULE_GROUP_d3PRGredirect_general'           => 'anwenden auf',
     'SHOP_MODULE_d3PRGredirect_search'                  => 'Such-Controller',
@@ -22,3 +23,4 @@ $aLang = [
     'SHOP_MODULE_d3PRGredirect_vendorlist'              => 'Artikellisten-Controller (Lieferanten)',
     'SHOP_MODULE_d3PRGredirect_contact'                 => 'Kontaktanfragen-Controller',
 ];
+// @codeCoverageIgnoreEnd

@@ -16,7 +16,12 @@ declare(strict_types=1);
 namespace D3\PRGredirects\Application\Core;
 
 use D3\PRGredirects\Modules\Core\Utils_PRGredirect;
+use Exception;
 use OxidEsales\Eshop\Core\Registry;
+use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
+use OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ModuleConfigurationDaoBridge;
+use OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ModuleConfigurationDaoBridgeInterface;
+use OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\DataObject\ModuleConfiguration;
 
 trait redirectControllerTrait
 {
@@ -40,7 +45,11 @@ trait redirectControllerTrait
             /** @var Utils_PRGredirect $utils */
             $utils = Registry::getUtils();
 
+            // remove fnc parameter
             $this->setFncName('');
+            $search = '/fnc=\w*(&(amp;)?|$)/m';
+            $url = preg_replace($search, "", $url);
+
             $utils->d3PrgRedirect($url);
         }
     }
@@ -53,11 +62,20 @@ trait redirectControllerTrait
         return strtoupper($_SERVER['REQUEST_METHOD']) === 'POST';
     }
 
-    /**
-     * @return bool
-     */
     protected function d3SelfRedirectIsConfigured(): bool
     {
-        return Registry::getConfig()->getConfigParam('d3PRGredirect_'.$this->getClassKey()) === true;
+        try {
+            /** @var ModuleConfigurationDaoBridge $configurationBridge */
+            $configurationBridge = ContainerFactory::getInstance()->getContainer()
+                ->get( ModuleConfigurationDaoBridgeInterface::class );
+
+            /** @var ModuleConfiguration $configuration */
+            $configuration = $configurationBridge->get( 'd3PRGredirect' );
+
+            return (bool) $configuration->getModuleSetting( 'd3PRGredirect_' . $this->getClassKey())
+                ->getValue();
+        } catch (Exception) {
+            return false;
+        }
     }
 }

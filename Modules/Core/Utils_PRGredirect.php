@@ -30,7 +30,7 @@ class Utils_PRGredirect extends Utils_PRGredirect_parent
         $headerCode = "HTTP/1.1 303 See Other";
 
         try {
-            $this->_simpleRedirect($url, $headerCode);
+            $this->simpleRedirect($url, $headerCode);
 
             Registry::getSession()->freeze();
         } catch (StandardException $e) {

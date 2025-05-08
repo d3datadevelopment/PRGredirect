@@ -15,7 +15,7 @@ Dieses Paket erfordert einen mit Composer installierten OXID eShop in einer in d
 
 
 ```bash
-php composer require d3/prg-redirects:^1.0
+php composer require d3/prg-redirects:^2.0
 ``` 
 
 Aktivieren Sie das Modul im Shopadmin unter "Erweiterungen -> Module".
