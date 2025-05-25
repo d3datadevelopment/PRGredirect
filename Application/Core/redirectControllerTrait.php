@@ -19,9 +19,8 @@ use D3\PRGredirects\Modules\Core\Utils_PRGredirect;
 use Exception;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
-use OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ModuleConfigurationDaoBridge;
-use OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ModuleConfigurationDaoBridgeInterface;
-use OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\DataObject\ModuleConfiguration;
+use OxidEsales\EshopCommunity\Internal\Framework\Module\Facade\ModuleSettingService;
+use OxidEsales\EshopCommunity\Internal\Framework\Module\Facade\ModuleSettingServiceInterface;
 
 trait redirectControllerTrait
 {
@@ -65,15 +64,9 @@ trait redirectControllerTrait
     protected function d3SelfRedirectIsConfigured(): bool
     {
         try {
-            /** @var ModuleConfigurationDaoBridge $configurationBridge */
-            $configurationBridge = ContainerFactory::getInstance()->getContainer()
-                ->get( ModuleConfigurationDaoBridgeInterface::class );
-
-            /** @var ModuleConfiguration $configuration */
-            $configuration = $configurationBridge->get( 'd3PRGredirect' );
-
-            return (bool) $configuration->getModuleSetting( 'd3PRGredirect_' . $this->getClassKey())
-                ->getValue();
+            /** @var ModuleSettingService $setting */
+            $setting = ContainerFactory::getInstance()->getContainer()->get(ModuleSettingServiceInterface::class);
+            return $setting->getBoolean('d3PRGredirect_' . $this->getClassKey(), 'd3PRGredirect');
         } catch (Exception) {
             return false;
         }
